@@ -1,11 +1,109 @@
-#busted-top-candle-company {  
-    background-color: #958C7D;
-    color: white;
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.woff2') format('woff2'),
+         url('../fonts/Roboto-Regular.woff') format('woff');
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: black;
+}
+
+header#busted_top_candle_company {  
+    background-color: #483B4C;
+    color: #6F4A7E;
     padding-top: 100px;
+    padding: 10px 0;
     margin: 0;
     width: 100%;
-    text-align: center;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
+    font-size: 45px;
+    text-shadow: #BBA0BF 0.18rem 0.18rem;
 }  
+
+.mission-statement {
+    background-color: #6F4A7E;
+    color: white;
+    padding: 20px;
+    margin-top: 63.6px;
+    width: 100%;
+    display: flex;
+}
+
+.about-us {
+    background-color: #6F4A7E;
+    color: white;
+    padding: 20px;
+    margin-top: 5px; /* Reduced margin-top value */
+    width: 100%;
+    display: flex;
+}
+
+#mission_statement h1, #about_us h1 {
+    margin: 0;
+}
+
+#mission_statement p, #about_us p {
+    margin: 10px;
+}
+
+.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.center-content h1 {
+    margin: 0;
+    text-align: center;
+}
+
+.center-content p {
+    text-align: center;
+    margin: 10px;
+}
+
+/* Parallax Section */
+.parallax-section {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.parallax-section:nth-child(2){
+    background-image: url("../assets/pictures/Vineyard1.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+/* Footer */
+footer {
+    position: fixed bottom; /* This fixes the footer to the bottom of the page */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    margin: auto;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.contact ul {
+    display: inline-block;
+    text-align: left;
+    list-style-type: none;
+}
+
+#phone_number {
+    color: #6F4A7E;
+    text-decoration: none;
+}
