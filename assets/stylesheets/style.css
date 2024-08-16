@@ -4,41 +4,90 @@
          url('../fonts/Roboto-Regular.woff') format('woff');
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: black;
+/* 
+    This section will need some fine tuning.
+*/
+@media (min-width: 480px) and (orientation: portrait) {
+    .vineyard-1 {
+        width: 100%;
+        margin-top: -10px;
+    }
 }
 
-header#busted_top_candle_company {  
+@media (min-width: 480px) and (orientation: landscape) {
+    .vineyard-1 {
+        width: 90%;
+        margin-top: -5px;
+    }
+}
+
+/* Image: Medium Screens */
+@media (min-width: 1024px) and (max-width: 1800px) {
+    .adjustable-img {
+        width: 100;
+        object-fit: cover;
+        margin-top: -50px !important;
+        background-image: url('assets/pictures/Vineyard3.png') !important;
+    }
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+}
+
+header#busted_top_candle_company {
+    position: absolute; 
     background-color: #483B4C;
     color: #6F4A7E;
     padding-top: 100px;
     padding: 10px 0;
     margin: 0;
     width: 100%;
-    position: absolute;
     top: 0;
     left: 0;
     font-size: 45px;
     text-shadow: #BBA0BF 0.18rem 0.18rem;
 }  
 
+/* Image: Large Screens */
+.adjustable-img {
+    width: 100%;
+    object-fit: cover;
+    scroll-margin-bottom: 50px;
+    margin-top: -175px;
+    /* background-attachment: fixed; */
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    background-image: url("assets/pictures/Vineyard2.png");
+    margin-bottom: -50px; /* create a gap between the image and the elements below */
+    z-index: 0;
+  }
+
 .mission-statement {
+    position: relative;
+    margin-top: 0; /* overlap with the image */
+    width: 100%;
     background-color: #6F4A7E;
     color: white;
     padding: 20px;
-    margin-top: 63.6px;
+    z-index: 1;
+}
+
+.about-us {
+    position: absloute;
+    background-color: #6F4A7E;
+    color: white;
+    padding: 5px;
+    padding-top: 50px;
+    margin-top: 0;
     width: 100%;
     display: flex;
 }
 
-.about-us {
-    background-color: #6F4A7E;
-    color: white;
-    padding: 20px;
-    margin-top: 5px; /* Reduced margin-top value */
-    width: 100%;
-    display: flex;
+#about_us {
+    padding: 150px;
 }
 
 #mission_statement h1, #about_us h1 {
@@ -70,16 +119,94 @@ header#busted_top_candle_company {
     height: 100vh;
     overflow: hidden;
     position: relative;
-}
-
-.parallax-section:nth-child(2){
+    background-color: whiteSub;
+  }
+  
+.parallax-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: url("../assets/pictures/Vineyard1.png");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    z-index: -1;
+  }
+
+.gallery-container {
+    /* overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: row; */
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  
+.slideshow {
+    position: absolute;
+    bottom: 8px;
+    display: flex;
+    flex-direction: row;
 }
+
+.slideshow div {
+    width: 8px;
+    height: 8px;
+    cursor: pointer;
+    background: #aaa;
+    border-radius: 100%;
+}
+
+.slideshow div.highlighted {
+    background-color: #777;
+}
+
+.slides {
+    margin: 0 16px;
+    display: gride;
+    grid-auto-flow: column;
+    gap: 1rem;
+    width: 540px;
+    padding: 0 0.25rem;
+    height: 720px;
+    overflow-y: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+
+.slides > div {
+    scroll-snap-align: start;
+}
+
+.slides img {
+    width: 540px;
+    object-fit: contain;
+}
+
+.slides::-webkit-scrollbar {
+    display: none;
+}
+
+  /* .slide {
+    position: absolute;
+    left: 0;
+    width: 25%;
+    height: 15%;
+    opacity: 0;
+    transition: opacity 1s;
+    margin-right: 10px;
+  }
+  
+  .slide1, .slide2, .slide3, .slide4 {
+    opacity: 1;
+  } */
 
 /* Footer */
 footer {
