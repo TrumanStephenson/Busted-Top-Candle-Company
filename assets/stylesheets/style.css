@@ -31,11 +31,41 @@
     }
 }
 
+/* 
+    This section will need some fine tuning.
+*/
+@media (min-width: 480px) and (orientation: portrait) {
+    .vineyard-1 {
+        width: 100%;
+        margin-top: -10px;
+    }
+}
+
+@media (min-width: 480px) and (orientation: landscape) {
+    .vineyard-1 {
+        width: 90%;
+        margin-top: -5px;
+    }
+}
+
+/* Image: Medium Screens */
+@media (min-width: 1024px) and (max-width: 1800px) {
+    .adjustable-img {
+        width: 100;
+        object-fit: cover;
+        margin-top: -50px !important;
+        background-image: url('assets/pictures/Vineyard3.png') !important;
+    }
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     background-color: white;
+    background-color: white;
 }
 
+header#busted_top_candle_company {
+    position: absolute; 
 header#busted_top_candle_company {
     position: absolute; 
     background-color: #483B4C;
@@ -64,26 +94,50 @@ header#busted_top_candle_company {
     margin-bottom: -50px; /* create a gap between the image and the elements below */
     z-index: 0;
   }
+}  
+
+/* Image: Large Screens */
+.adjustable-img {
+    width: 100%;
+    object-fit: cover;
+    scroll-margin-bottom: 50px;
+    margin-top: -175px;
+    /* background-attachment: fixed; */
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    background-image: url("assets/pictures/Vineyard2.png");
+    margin-bottom: -50px; /* create a gap between the image and the elements below */
+    z-index: 0;
+  }
 
 .mission-statement {
     position: relative;
     margin-top: 0; /* overlap with the image */
     width: 100%;
-    background-color: #6F4A7E;
+    background-color: #691E59;
     color: white;
     padding: 20px;
+    z-index: 1;
     z-index: 1;
 }
 
 .about-us {
     position: absloute;
-    background-color: #6F4A7E;
+    background-color: #691E59;
     color: white;
+    padding: 5px;
+    padding-top: 50px;
+    margin-top: 0;
     padding: 5px;
     padding-top: 50px;
     margin-top: 0;
     width: 100%;
     display: flex;
+}
+
+#about_us {
+    padding: 150px;
 }
 
 #about_us {
@@ -119,7 +173,7 @@ header#busted_top_candle_company {
     height: 100vh;
     overflow: hidden;
     position: relative;
-    background-color: whiteSub;
+    background-color: white;
   }
   
 .parallax-section::before {
@@ -137,6 +191,7 @@ header#busted_top_candle_company {
     z-index: -1;
   }
 
+/* Gallery */
 .gallery-container {
     /* overflow-x: auto;
     overflow-y: hidden;
@@ -169,7 +224,7 @@ header#busted_top_candle_company {
 
 .slides {
     margin: 0 16px;
-    display: gride;
+    display: grid;
     grid-auto-flow: column;
     gap: 1rem;
     width: 540px;
@@ -192,6 +247,15 @@ header#busted_top_candle_company {
 
 .slides::-webkit-scrollbar {
     display: none;
+}
+
+.thumbnail {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    /* object-fit: contain;
+    cursor: pointer; */
 }
 
   /* .slide {
