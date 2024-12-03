@@ -1,43 +1,46 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const slideshow = document.querySelector('.slideshow');
-  const slidesContainer = slideshow.querySelector('.slides');
-  const slides = slidesContainer.querySelectorAll('.slide');
-  const slideCount = slides.length;
-  const slideWidth = 540;
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
-  const highlightThumbnail = () => {
-    slideshow
-      .querySelectorAll('.highlighted')
-      .forEach(el => el.classList.remove('highlighted'));
-    const index = Math.floor(slidesContainer.scrollLeft / slideWidth);
-    slideshow
-      .querySelector(`.thumbnail[data-id="${index}"]`)
-      .classList.add('highlighted');
-  };
+// document.addEventListener('DOMContentLoaded', () => {
+//   const slideshow = document.querySelector('.slideshow');
+//   const slidesContainer = slideshow.querySelector('.slides');
+//   const slides = slidesContainer.querySelectorAll('.slide');
+//   const slideCount = slides.length;
+//   const slideWidth = 540;
 
-  const scrollToElement = el => {
-    const index = parseInt(el.dataset.id, 10);
-    slidesContainer.scrollTo(index * slideWidth, 0);
-  };
+//   const highlightThumbnail = () => {
+//     slideshow
+//       .querySelectorAll('.highlighted')
+//       .forEach(el => el.classList.remove('highlighted'));
+//     const index = Math.floor(slidesContainer.scrollLeft / slideWidth);
+//     slideshow
+//       .querySelector(`.thumbnail[data-id="${index}"]`)
+//       .classList.add('highlighted');
+//   };
 
-  const thumbnailsContainer = document.createElement('div');
-  thumbnailsContainer.classList.add('thumbnails');
-  slideshow.appendChild(thumbnailsContainer);
+//   const scrollToElement = el => {
+//     const index = parseInt(el.dataset.id, 10);
+//     slidesContainer.scrollTo(index * slideWidth, 0);
+//   };
 
-  slides.forEach((slide, i) => {
-    console.log(slide.src);
-    const thumbnail = document.createElement('div');
-    thumbnail.classList.add('thumbnail');
-    thumbnail.dataset.id = i;
-    thumbnail.style.backgroundImage = `url(${slide.src})`;
-    thumbnailsContainer.appendChild(thumbnail);
-  });
+//   const thumbnailsContainer = document.createElement('div');
+//   thumbnailsContainer.classList.add('thumbnails');
+//   slideshow.appendChild(thumbnailsContainer);
 
-  thumbnailsContainer.querySelectorAll('.thumbnail').forEach(thumbnail => {
-    thumbnail.addEventListener('click', () => scrollToElement(thumbnail));
-  });
+//   slides.forEach((slide, i) => {
+//     console.log(slide.src);
+//     const thumbnail = document.createElement('div');
+//     thumbnail.classList.add('thumbnail');
+//     thumbnail.dataset.id = i;
+//     thumbnail.style.backgroundImage = `url(${slide.src})`;
+//     thumbnailsContainer.appendChild(thumbnail);
+//   });
 
-  slidesContainer.addEventListener('scroll', highlightThumbnail);
+//   thumbnailsContainer.querySelectorAll('.thumbnail').forEach(thumbnail => {
+//     thumbnail.addEventListener('click', () => scrollToElement(thumbnail));
+//   });
 
-  highlightThumbnail();
-});
+//   slidesContainer.addEventListener('scroll', highlightThumbnail);
+
+//   highlightThumbnail();
+// });
