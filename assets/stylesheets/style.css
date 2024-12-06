@@ -1,5 +1,6 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
 @import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+@import '../assets/stylesheets/bootstrap5.css';
 
 @font-face {
     font-family: 'Roboto';
@@ -8,10 +9,9 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: black;
 }
 
-header, #busted_top_candle_company {
+header {
     position: absolute; 
     background-color: #653A3D;
     color: white;
@@ -20,7 +20,7 @@ header, #busted_top_candle_company {
     width: 100%;
     font-size: 65px;
     text-shadow: blue 0.20rem 0.20rem;
-}  
+}
 
 /* Image: Large Screens */
 .adjustable-img {
@@ -32,7 +32,7 @@ header, #busted_top_candle_company {
 }
 
 .statement-container {
-    margin-left: 2.5%;
+    margin: auto;
 }
 
 .mission-statement {
@@ -52,12 +52,6 @@ header, #busted_top_candle_company {
     font-size: 20px;
 }
 
-/* .center-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-} */
-
 .center-content p {
     text-align: center;
     margin: 10px;
@@ -65,11 +59,10 @@ header, #busted_top_candle_company {
 
 /* Footer */
 footer {
-    position: fixed bottom; /* This fixes the footer to the bottom of the page */
+    position: fixed bottom;
     bottom: 0;
     left: 0;
     right: 0;
-    text-align: center;
     text-decoration: none;
     padding: 10px;
     margin: auto;
