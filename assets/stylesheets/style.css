@@ -13,13 +13,13 @@ body {
 
 header, #busted_top_candle_company {
     position: absolute; 
-    background-color: black;
-    color: #691E59;
+    background-color: #653A3D;
+    color: white;
     padding-top: 100px;
     padding: 10px 0;
     width: 100%;
     font-size: 65px;
-    text-shadow: #6F4A7E 0.10rem 0.10rem;
+    text-shadow: blue 0.20rem 0.20rem;
 }  
 
 /* Image: Large Screens */
@@ -29,8 +29,6 @@ header, #busted_top_candle_company {
     scroll-margin-bottom: 50px;
     margin-top: -175px;
     background-position: center;
-    background-repeat: no-repeat;
-    background-image: url("assets/pictures/Vineyard2.png");
 }
 
 .statement-container {
@@ -41,7 +39,8 @@ header, #busted_top_candle_company {
     background-color: #691E59;
     color: white;
     padding: 20px;
-    border-radius: 20px;
+    border-radius: 25px;
+    font-size: 30px;
 }
 
 .about-us {
@@ -49,7 +48,8 @@ header, #busted_top_candle_company {
     color: white;
     padding: 5px;
     padding-top: 50px;
-    border-radius: 20px;
+    border-radius: 25px;
+    font-size: 20px;
 }
 
 /* .center-content {
