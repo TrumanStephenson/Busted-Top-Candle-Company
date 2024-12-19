@@ -7,13 +7,18 @@
     src: url('../fonts/Roboto-Regular.woff') format('woff');
 }
 
+/* For different screen sizes specifically */
+@media (max-width: 600px) {
+    
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     background-color: black !important;
 }
 
 header {
-    position: absolute; 
+    position: relative; 
     background-color: #653A3D;
     color: white;
     padding: 10px 0;
