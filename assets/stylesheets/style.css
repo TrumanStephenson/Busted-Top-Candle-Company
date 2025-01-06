@@ -10,7 +10,13 @@
 /* For different screen sizes specifically */
 /* iPhone SE */
 @media (max-width: 375px) and (max-height: 667px) {
-    /* Styles for iPhone SE */
+    .mission-statement {
+      font-size: 20px !important;
+    }
+
+    .about-us {
+      font-size: 15px !important;
+    }
   }
   
   /* iPhone XR */
@@ -116,16 +122,9 @@ header {
     padding-top: env(safe-area-insert-top);
 }
 
-/* header {
-    position: relative; 
-} */
-
 .adjustable-img {
-    /* width: 100%; */
     object-fit: cover;
-    /* scroll-margin-bottom: 50px; */
     margin-top: 10px;
-    /* background-position: center; */
 }
 
 .statement-container {
@@ -135,7 +134,6 @@ header {
 .mission-statement {
     background-color: #691E59;
     color: white;
-    padding: 20px;
     border-radius: 25px;
     font-size: 30px;
 }
@@ -152,6 +150,11 @@ header {
 .center-content p {
     text-align: center;
     margin: 10px;
+}
+
+#wine-candle-1,
+#wine-candle-2 {
+  border-radius: 30px;
 }
 
 footer {
