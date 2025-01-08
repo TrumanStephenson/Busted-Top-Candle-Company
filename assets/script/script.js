@@ -1,55 +1,41 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+const devices = {
+      iPhoneSE: { width: 375, height: 667 },
+      iPhoneXR: { width: 414, height: 896 },
+      iPhone12Pro: { width: 390, height: 844 },
+      iPhone12ProMax: { width: 428, height: 926 },
+      iPad: { width: 768, height: 1024 },
+      iPadPro: { width: 1024, height: 1366 },
+      Pixel2: { width: 411, height: 731 },
+      Pixel2XL: { width: 411, height: 823 },
+      Pixel4: { width: 411, height: 869 },
+      Pixel4XL: { width: 411, height: 823 },
+      GalaxyS5: { width: 360, height: 640 },
+      GalaxyS9: { width: 360, height: 740 },
+      GalaxyS9Plus: { width: 360, height: 740 },
+      GalaxyNote9: { width: 360, height: 740 },
+      GalaxyFold: {
+        folded: { width: 280, height: 653 },
+        unfolded: { width: 653, height: 280 },
+      },
+      SurfaceDuo: {
+        singleScreen: { width: 540, height: 720 },
+        dualScreen: { width: 720, height: 540 },
+      },
+    };
 
+enquire.register("screen and (min-width: 1024px) and (max-width: 1280px)", {
+    match: () => {
+    document.querySelector(".toggle-img-2").classList.remove("d-none");
+    document.querySelector(".toggle-img-1").classList.add("d-none");
+    },
+});
 
-
-
-// This failed. The bootstrap classes really helped clean up the size differences.
-// function registerMediaQueries(devices) {
-//   Object.keys(devices).forEach(device => {
-//     const width = devices[device].width;
-//     const height = devices[device].height;
-
-//     enquire.register('screen and (max-width: ' + width + 'px) and (max-height: ' + height + 'px)', {
-//       match: () => {
-//         console.log('Media query matched!');
-//         handleResize();
-//       },
-//       unmatch: () => {
-//         console.log('Media query unmatched!');
-//         handleResize();
-//       },
-//     });
-//   });
-// }
-
-// const devices = {
-//   iPhoneSE: { width: 375, height: 667 },
-//   iPhoneXR: { width: 414, height: 896 },
-//   iPhone12Pro: { width: 390, height: 844 },
-//   iPhone12ProMax: { width: 428, height: 926 },
-//   iPad: { width: 768, height: 1024 },
-//   iPadPro: { width: 1024, height: 1366 },
-//   Pixel2: { width: 411, height: 731 },
-//   Pixel2XL: { width: 411, height: 823 },
-//   Pixel4: { width: 411, height: 869 },
-//   Pixel4XL: { width: 411, height: 823 },
-//   GalaxyS5: { width: 360, height: 640 },
-//   GalaxyS9: { width: 360, height: 740 },
-//   GalaxyS9Plus: { width: 360, height: 740 },
-//   GalaxyNote9: { width: 360, height: 740 },
-//   GalaxyFold: {
-//     folded: { width: 280, height: 653 },
-//     unfolded: { width: 653, height: 280 },
-//   },
-//   SurfaceDuo: {
-//     singleScreen: { width: 540, height: 720 },
-//     dualScreen: { width: 720, height: 540 },
-//   },
-// };
-
-// registerMediaQueries(devices);
-
+enquire.register("screen and (min-width: 1280px)", {
+    match: () => {
+    document.querySelector(".toggle-img-2").classList.add("d-none");
+    document.querySelector(".toggle-img-1").classList.remove("d-none");
+    },
+});
 
 //
 // Come back to this later. for the gallery.
