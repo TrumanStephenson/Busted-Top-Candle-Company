@@ -23,33 +23,18 @@ const devices = {
     iPadPro: { width: 1024, height: 1366 },
 };
 
+// Handling the resize
 window.addEventListener('resize', function() {
     let width = window.innerWidth;
-    
+    const toggledImg1 = document.querySelectorAll(".toggle-img-1");
+    const toggledImg2 = document.querySelectorAll(".toggle-img-2");
+
     if (width <= devices.iPadPro.width) {
-        console.log('Screen size is less than iPad Pro');
-        enquire.register("screen and (min-width: 1024px) and (max-width: 1279px)", {
-            deferSetup: true,
-            setup: function() {
-                // This code will run only once, the first time the media query is matched 
-                console.log('Setup code executed'); 
-                // Example setup code: Initialize some elements or variables
-                const element = document.querySelector(".toggle-img-2"); 
-                if (element) { 
-                    element.style.backgroundColor = "blue"; 
-                }
-            }, match: function() {
-                    document.querySelector(".toggle-img-2").classList.remove("d-none");
-                    document.querySelector(".toggle-img-1").classList.add("d-none"); },
-                unmatch: function() {
-                    document.querySelector(".toggle-img-2").classList.add("d-none");
-                    document.querySelector(".toggle-img-1").classList.remove("d-none");
-            }, destroy: function() {
-                console.log('Handler unregistered'); } });
-        console.log(enquire.register());
-    } else if (width >= 600 && width < 1200) {
-        console.log('Screen size is between 600px and 1200px');
-        
+        toggledImg1.forEach(img => img.style.display = 'none');
+        toggledImg2.forEach(img => img.style.display = 'block');
+    } else if (width > devices.iPadPro.width) {
+        toggledImg1.forEach(img => img.style.display = 'block');
+        toggledImg2.forEach(img => img.style.display = 'none');
     }
 });
 
