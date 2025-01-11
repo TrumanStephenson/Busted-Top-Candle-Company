@@ -24,7 +24,7 @@ const devices = {
 };
 
 // Handling the resize
-window.addEventListener('resize', function() {
+window.addEventListener('resize' && 'load', function() {
     let width = window.innerWidth;
     const toggledImg1 = document.querySelectorAll(".toggle-img-1");
     const toggledImg2 = document.querySelectorAll(".toggle-img-2");
@@ -32,9 +32,10 @@ window.addEventListener('resize', function() {
     if (width <= devices.iPadPro.width) {
         toggledImg1.forEach(img => img.style.display = 'none');
         toggledImg2.forEach(img => img.style.display = 'block');
-    } else if (width > devices.iPadPro.width) {
+    } else {
         toggledImg1.forEach(img => img.style.display = 'block');
         toggledImg2.forEach(img => img.style.display = 'none');
+        console.log(toggledImg1, toggledImg2);
     }
 });
 
