@@ -135,21 +135,14 @@ header {
     background-color: #691E59;
     color: white;
     border-radius: 25px;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .about-us {
     background-color: #691E59;
     color: white;
-    padding: 5px;
-    padding-top: 50px;
     border-radius: 25px;
     font-size: 20px;
-}
-
-.center-content p {
-    text-align: center;
-    margin: 10px;
 }
 
 #wine-candle-1,
@@ -168,6 +161,6 @@ footer {
 
 .contact ul {
     display: inline-block;
-    text-align: left;
+    text-align: center;
     list-style-type: none;
 }
