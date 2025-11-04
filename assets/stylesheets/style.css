@@ -127,6 +127,10 @@ header {
     margin-top: 10px;
 }
 
+.btn {
+    color: white !important;
+}
+
 .statement-container {
     margin: auto;
 }
