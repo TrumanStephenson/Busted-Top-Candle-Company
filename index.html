@@ -20,7 +20,7 @@
                 <img class="img-fluid col-md-6 toggle-img-1" id="wine-candle-2" alt="wine-candle-2" src="assets/pictures/wine-candle-2.png">
                 <section class="about-us text-center p-3 mx-auto mb-0 text-center col-md-6 fs-6" id="about_us">
                     <h1>What We Do</h1>
-                    <p>
+                    <p data-toggle="collapse" > <!-- Try adding a scroll bar to this text. So it compresses the information. Maybe even an option for view more and it'll expand  -->
                         We are Dale and Jennifer Burkett, the proud owners and designers behind Busted Top Candles. 
                         Our journey began in the summer of 2021 with a collection of empty wine bottles—each one holding sentimental value or boasting a unique label. 
                         Driven by a love for candles and a bit of Pinterest inspiration, we set out to repurpose these bottles into beautiful, hand-crafted candles.
@@ -34,6 +34,9 @@
                         However, we also cater to individual customers who cherish a special bottle or wish to choose from our inventory of candles—each one crafted from our own collection of wine bottles.
                         Thank you for joining us on this journey. We are excited to share our candles with you and bring a bit of warmth and charm to your space.
                     </p>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#about_us p" aria-expanded="false" aria-controls="about_us p">
+                        ...
+                    </button>
                 </section>
             </div>
            <div class="row mx-2 mt-5 toggle-img-2">
