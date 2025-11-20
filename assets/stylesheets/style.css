@@ -105,12 +105,6 @@
 }
 
 /* Normal CSS from here */
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: black !important;
-    margin-top: env(safe-area-insert-top);
-}
-
 header {
     position: relative; 
     background-color: #653A3D;
@@ -121,6 +115,30 @@ header {
     text-shadow: maroon 0.20rem 0.20rem;
     padding-top: env(safe-area-insert-top);
 }
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: black !important;
+    margin-top: env(safe-area-insert-top);
+}
+
+/* Scrolling start */
+/* .scroll-warpper {
+  display: flex;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scroll-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.album-card {
+  flex: 0 0 auto;
+  width: 200px;
+  margin-right: 1rem;
+} */
 
 .adjustable-img {
     object-fit: cover;
@@ -135,7 +153,25 @@ header {
     margin: auto;
 }
 
-.mission-statement {
+/* .paragraph-container {
+    background-color: #691E59;
+    color: white;
+    border-radius: 25px;
+    font-size: 25px;
+} */
+
+.paragraph-container {
+    /* background-color: #A5947A; */
+    /* background-color: #817A67; */
+    /* background-color: #817A67; */
+    /* background-color: #817A67; */
+    background-color: #817A67;
+    color: white;
+    border-radius: 25px;
+    font-size: 25px;
+}
+
+.pricing-main {
     background-color: #691E59;
     color: white;
     border-radius: 25px;
