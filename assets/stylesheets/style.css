@@ -118,7 +118,9 @@ header {
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: black !important;
+    /* background-color: black !important; */ 
+    /* background-color: #F5F5DC !important; */ /* I like this one, combined with #817A67 on paragraph container */
+    background-color: #F5F5DC !important;
     margin-top: env(safe-area-insert-top);
 }
 
@@ -153,30 +155,21 @@ body {
     margin: auto;
 }
 
-/* .paragraph-container {
-    background-color: #691E59;
-    color: white;
-    border-radius: 25px;
-    font-size: 25px;
-} */
-
 .paragraph-container {
-    /* background-color: #A5947A; */
-    /* background-color: #817A67; */
-    /* background-color: #817A67; */
-    /* background-color: #817A67; */
     background-color: #817A67;
     color: white;
     border-radius: 25px;
     font-size: 25px;
 }
 
-.pricing-main {
-    background-color: #691E59;
-    color: white;
-    border-radius: 25px;
-    font-size: 25px;
-}
+/* Colors:
+  (p-container)        +    (background)
+  #691E59(orig plum)        #2E2E2E(charcoal gry)
+  #817A67(taupe)            #F5F5DC(neutral wht)
+  #A5947A
+  
+
+*/
 
 .about-us {
     background-color: #691E59;
