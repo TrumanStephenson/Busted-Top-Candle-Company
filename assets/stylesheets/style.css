@@ -120,27 +120,9 @@ body {
     font-family: 'Roboto', sans-serif;
     /* background-color: black !important; */ 
     /* background-color: #F5F5DC !important; */ /* I like this one, combined with #817A67 on paragraph container */
-    background-color: #F5F5DC !important;
+    background-color: #4A7277 !important;
     margin-top: env(safe-area-insert-top);
 }
-
-/* Scrolling start */
-/* .scroll-warpper {
-  display: flex;
-  overflow-x: auto;
-  flex-wrap: nowrap;
-  -webkit-overflow-scrolling: touch;
-}
-
-.scroll-wrapper::-webkit-scrollbar {
-  display: none;
-}
-
-.album-card {
-  flex: 0 0 auto;
-  width: 200px;
-  margin-right: 1rem;
-} */
 
 .adjustable-img {
     object-fit: cover;
