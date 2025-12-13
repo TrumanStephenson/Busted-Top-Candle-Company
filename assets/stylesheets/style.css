@@ -112,7 +112,7 @@ header {
     padding: 10px 0;
     min-width: 100%;
     font-size: 65px;
-    text-shadow: maroon 0.20rem 0.20rem;
+    /* text-shadow: maroon 0.20rem 0.20rem; */
     padding-top: env(safe-area-insert-top);
 }
 
@@ -191,10 +191,10 @@ footer {
     color: white;
     background-color: #653A3D;
 }
-
+/* 
 .footer-image {
   
-}
+} */
 
 .contact ul {
     display: inline-block;
