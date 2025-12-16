@@ -105,6 +105,11 @@
 }
 
 /* Normal CSS from here */
+
+#logo {
+  width: 25%;
+}
+
 header {
     position: relative; 
     background-color: #653A3D;
@@ -125,24 +130,6 @@ body {
     background-color: #F5F5DC !important;
     margin-top: env(safe-area-insert-top);
 }
-
-/* Scrolling start */
-/* .scroll-warpper {
-  display: flex;
-  overflow-x: auto;
-  flex-wrap: nowrap;
-  -webkit-overflow-scrolling: touch;
-}
-
-.scroll-wrapper::-webkit-scrollbar {
-  display: none;
-}
-
-.album-card {
-  flex: 0 0 auto;
-  width: 200px;
-  margin-right: 1rem;
-} */
 
 /* Colors:
   (p-container)        +    (background)
@@ -193,13 +180,8 @@ footer {
     color: white;
     background-color: #653A3D;
 }
-/* 
-.footer-image {
-  
-} */
 
 .contact ul {
     display: inline-block;
-    text-align: center;
     list-style-type: none;
 }
