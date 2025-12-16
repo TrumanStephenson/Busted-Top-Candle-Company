@@ -169,14 +169,12 @@ body {
 
 #wine-candle-1,
 #wine-candle-2 {
-  border-radius: 30px;
+  border-radius: 50px;
 }
 
 footer {
     position: fixed bottom;
-    text-decoration: none;
     padding: 10px;
-    margin: auto;
     color: white;
     background-color: #653A3D;
 }
