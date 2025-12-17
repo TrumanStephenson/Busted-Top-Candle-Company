@@ -167,11 +167,6 @@ body {
     font-size: 20px;
 }
 
-/* #wine-candle-1,
-#wine-candle-2 {
-  border-radius: 50px;
-} */
-
 footer {
     position: fixed bottom;
     padding: 10px;
@@ -179,7 +174,7 @@ footer {
     background-color: #653A3D;
 }
 
-.contact ul {
+/* .contact ul {
     display: inline-block;
     list-style-type: none;
-}
+} */
