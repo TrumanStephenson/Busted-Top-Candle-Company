@@ -40,7 +40,8 @@ body {
     color: white !important;
 }
 
-.paragraph-container {
+.paragraph-container, 
+.email-us {
     background-color: #817A67;
     color: white;
     border-radius: 25px;
@@ -58,3 +59,72 @@ footer {
     display: inline-block;
     list-style-type: none;
 }
+
+/* @media screen and (hover: hover) {
+  .button::after {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    transform: skew(-15deg);
+    background-image: linear-gradient(90deg, transparent, rgba(var(--color-button-text), 0.25), transparent);
+  }
+
+  .button--secondary::after {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 120%;
+    height: 100%;
+    background-image: none;
+    background-color: rgb(var(--color-button-text));
+    backface-visibility: hidden;
+    will-change: transform;
+    transform: rotate3d(0, 0, 1, 10deg) translate3d(-1.2em, 110%, 0);
+    transform-origin: 0% 100%;
+    transition: transform var(--duration-long) ease;
+  }
+
+  .button--tertiary::after {
+    content: none;
+  }
+
+  .button:hover {
+    box-shadow: none;
+    background-color: rgba(var(--color-button-background), 0.85);
+    transition-delay: var(--duration-default);
+  }
+
+  .button:hover::after {
+    animation: shine var(--duration-animate) ease;
+  }
+
+  .button--secondary:hover {
+    color: rgb(var(--color-button-background));
+    transition-delay: 0s;
+  }
+
+  .button--secondary:hover::after {
+    animation: none;
+    transform: rotate3d(0, 0, 1, 0deg) translate3d(0, 0, 0);
+  }
+
+  .button--tertiary:hover {
+    color: rgb(var(--color-button-text));
+    box-shadow: inset 0 0 0 0.2rem rgb(var(--color-button-border));
+    transition-delay: 0s;
+  }
+
+  @keyframes shine {
+    to {
+      left: 100%;
+    }
+  }
+} */
