@@ -50,14 +50,16 @@ body {
 
 footer {
     position: fixed bottom;
-    padding: 10px;
     color: white;
     background-color: #653A3D;
 }
 
-.contact ul {
+.contact ul,
+.partners ul {
     display: inline-block;
     list-style-type: none;
+    padding-left: 0;
+    margin: 0 auto;
 }
 
 /* @media screen and (hover: hover) {
