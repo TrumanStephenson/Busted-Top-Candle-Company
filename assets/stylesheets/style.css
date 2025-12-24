@@ -40,6 +40,18 @@ body {
     color: white !important;
 }
 
+.when-expanded {
+  display: none;
+}
+
+button[aria-expanded="true"] .when-expanded {
+  display: inline;
+}
+
+button[aria-expanded="true"] .when-collapsed {
+  display: none;
+}
+
 .paragraph-container, 
 .email-us {
     background-color: #817A67;
