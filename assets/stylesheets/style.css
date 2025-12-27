@@ -36,22 +36,52 @@ body {
     margin-top: env(safe-area-insert-top);
 }
 
+a {
+    color: inherit !important;
+}
+
 .btn {
     color: white !important;
 }
 
+.when-expanded {
+  display: none;
+}
+
+button[aria-expanded="true"] .when-expanded {
+  display: inline;
+}
+
+button[aria-expanded="true"] .when-collapsed {
+  display: none;
+}
+
 .paragraph-container, 
-.email-us {
+.email-us,
+.price-container {
     background-color: #817A67;
     color: white;
     border-radius: 25px;
     font-size: 25px;
 }
 
+.price {
+    /* color: #2E2E2E; */
+    color: #691E59;
+}
+
+.price-blocks {
+    background-color: #817A67 !important; 
+}
+
 footer {
     position: fixed bottom;
-    color: white;
     background-color: #653A3D;
+}
+
+.flag {
+  margin-top: 5px;
+  margin-right: 2px;
 }
 
 .contact ul,
