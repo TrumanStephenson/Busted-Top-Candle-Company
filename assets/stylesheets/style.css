@@ -48,6 +48,7 @@ a {
   display: none;
 }
 
+
 button[aria-expanded="true"] .when-expanded {
   display: inline;
 }
