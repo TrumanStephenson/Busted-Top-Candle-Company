@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     const qtyInput = document.getElementById("inputQuantity");
-    let pricePer = document.getElementById("costDisplay");
+    // let pricePer = document.getElementById("costDisplay");
 
     qtyInput.addEventListener("input", function() {
         const qty = parseInt(this.value, 10);
