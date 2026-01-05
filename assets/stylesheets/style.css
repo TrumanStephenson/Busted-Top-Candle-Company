@@ -62,12 +62,8 @@ button[aria-expanded="true"] .when-collapsed {
   background-color: #817A67 !important; 
 }
 
-#order_info {
-  text-decoration: none !important;
-}
-
 footer {
-  position: fixed bottom;
+  /* position: fixed bottom !important; */
   background-color: #653A3D;
 }
 

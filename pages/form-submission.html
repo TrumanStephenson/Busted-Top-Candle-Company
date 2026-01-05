@@ -12,84 +12,90 @@
     </head>
 
     <header class="position-sticky p-3 fs-4" id="busted_top_candle_company">
-        <div class="row mx-auto ">
-            <img id="logo" alt="busted-top-candle-company-logo" src="../assets/pictures/BTC logo.png">
+        <div class="row mx-auto">
+            <!-- <img id="logo" alt="busted-top-candle-company-logo" src="../assets/pictures/BTC logo.png"> -->
             <div>Busted Top Candle Company</div>
         </div>
         <div>
             <nav class="nav justify-content-end mt-1 fs-5" id="navigation_bar">
+                <a class="nav-link text-decoration-none" href="../pages/about.html">About</a>
+                <a class="nav-link text-decoration-none" href="../pages/contact.html">Contact</a>
                 <a class="nav-link text-decoration-none" href="../index.html">Home</a>
-                <!-- <a class="nav-link text-decoration-none" href="../pages/form-submission.html">Order Now</a> -->
-                <!-- <a class="nav-link text-decoration-none" href="../pages/about.html">About</a> -->
-                <!-- <a class="nav-link text-decoration-none" href="../pages/contact.html">Contact</a> -->
             </nav>
         </div>
     </header>
 
+    <!-- Pricing Section:
+        Maybe a row for the list. Boxed out and make the prices pop more.
+        ex: 
+        https://codepen.io/knyttneve/pen/NWjwbKz
+        https://codepen.io/chaoticpotato/pen/zYEPRYG
+        https://codepen.io/Qudusayo/pen/eYJKzdZ
+    -->
+
     <body>
         <div class="container">
+
             <main class="justify-content-center" id="main_form">
-                <!-- Pricing Section:
-                Maybe a row for the list. Boxed out and make the prices pop more.
-                ex: 
-                https://codepen.io/knyttneve/pen/NWjwbKz
-                https://codepen.io/chaoticpotato/pen/zYEPRYG
-                https://codepen.io/Qudusayo/pen/eYJKzdZ
-                -->
-                <form class="paragraph-container row p-3 mt-3 m-3">
-                    <div class="col-sm-3">
-                        <label class="mt-3">Scents</label>
-                        <div class="col-sm-12">
-                            <select id="inputPayments" class="form-control">
-                                <option selected>Select...</option>
-                                <option>Lavender</option>
-                                <option>Citrus</option>
-                                <option>Cinamon</option>
-                            </select>
-                        </div>
-                        <label for="">How many?</label>
-                        <input type="number" class="form-control" id="inputQuantity" placeholder="Amount">
+
+                <form class="paragraph-container row p-3 mt-3 m-3" id="submit_form">
+                    <div class="col-sm-6">
+                        <label class="mt-4">Tasting room collection</label>
+                        <br>
+                        <label>Scents</label>
+                        <select name="scent-selection" id="inputPayments" class="form-control" aria-required="true">
+                            <option selected>Select...</option>
+                            <option>Lavender</option>
+                            <option>Citrus</option>
+                            <option>Cinamon</option>
+                        </select>
+                        
+                        <label for="">How many candles?</label>
+                        <input type="number" class="form-control" id="inputQuantity" placeholder="Amount" aria-required="true">
+
                         <label for="inputQuantity">Cost</label>
-                        <div class="fw-bold mt-2 p-2 border rounded" id="costDisplay"></div>
+                        <div class="mt-2 p-2 col-sm-3" id="costDisplay">Total: </div>
+                        
                     </div>
+                   
                     <div class="col-sm-6 mt-4">
                         <label>Contact information</label>
                         <div>
+                            <label for="inputFirstName">First Name</label>
+                            <input type="text" name="firstName" class="form-control" id="inputFirstName" placeholder="First name" aria-required="true">
+                        </div>
+                        <div>
+                            <label for="inputLastName">Last Name</label>
+                            <input type="text" name="lastName" class="form-control" id="inputLastName" placeholder="Last name" aria-required="true">
+                        </div>
+                        <div>
                             <label for="inputEmail4">Email</label>
-                            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                            <input type="email" name="email" class="form-control" id="inputEmail4" placeholder="Email" aria-required="true">
                         </div>
                         <div>
                             <label for="inputAddress">Address</label>
-                            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                            <input type="text" name="address" class="form-control" id="inputAddress" placeholder="1234 Main St" aria-required="true">
                         </div>
                         <div class="">
                             <label for="inputAddress2">Address 2</label>
-                            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, unit, floor, etc...">
+                            <input type="text" name="address2" class="form-control" id="inputAddress2" placeholder="Apartment, studio, unit, floor, etc..." aria-required="true">
                         </div>
                         <div class="">
                             <label for="inputCity">City</label>
-                            <input type="text" class="form-control" id="inputCity">
+                            <input type="text" name="city" class="form-control" id="inputCity" aria-required="true">
                         </div>
                         <div class="col-sm-5">
                             <label for="inputState">State</label>
-                            <select id="inputState" class="form-control">
+                            <select name="state" class="form-control" id="inputState" aria-required="true">
                                 <option selected>Select...</option>
                             </select>
                         </div>
                         <div class="col-sm-5">
                             <label for="inputZip">Zip</label>
-                            <input type="number" class="form-control" id="inputZip">
+                            <input type="number" name="zip" class="form-control" id="inputZip" aria-required="true">
                         </div>
-                        <label class="mt-3">Preferred Payment:</label>
-                        <div class="col-sm-5">
-                            <select id="inputPayments" class="form-control">
-                                <option selected>Select...</option>
-                                <option>Cash App</option>
-                                <option>Venmo</option>
-                                <option>Square</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="col-sm-6 btn mt-3 btn-primary mt-2">Submit order</button>
+                        
+                        <button type="submit" class="btn btn-primary mt-3">Submit order</button>
                     </div>
                     
                 </form>
@@ -127,7 +133,8 @@
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
         <script src="../assets/script/script.js" defer></script>
-    
+        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
     </body>
 
 </html>
