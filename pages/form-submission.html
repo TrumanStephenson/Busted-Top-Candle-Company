@@ -6,147 +6,104 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../assets/stylesheets/style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
         <title>Busted Top Candle Company</title>
     </head>
 
-    <header class="position-sticky p-3 fs-4" id="busted_top_candle_company">
-        <div class="row mx-auto">
-            <!-- <img id="logo" alt="busted-top-candle-company-logo" src="../assets/pictures/BTC logo.png"> -->
-            <div>Busted Top Candle Company</div>
-        </div>
-        <div>
-            <nav class="nav justify-content-end mt-1 fs-5" id="navigation_bar">
-                <a class="nav-link text-decoration-none" href="../pages/about.html">About</a>
-                <a class="nav-link text-decoration-none" href="../pages/contact.html">Contact</a>
-                <a class="nav-link text-decoration-none" href="../index.html">Home</a>
-            </nav>
-        </div>
-    </header>
+    <body class="d-flex flex-column">
+        
+            <header class="position-sticky p-3 fs-4" id="busted_top_candle_company">
+                <div class="mx-auto">
+                    <div>Busted Top Candle Company</div>
+                </div>
+                <div>
+                    <nav class="nav justify-content-end mt-1 fs-5" id="navigation_bar">
+                        <a class="nav-link text-decoration-none" href="../pages/about.html">About</a>
+                        <a class="nav-link text-decoration-none" href="../pages/contact.html">Contact</a>
+                        <a class="nav-link text-decoration-none" href="../index.html">Home</a>
+                    </nav>
+                </div>
+            </header>
 
-    <!-- Pricing Section:
-        Maybe a row for the list. Boxed out and make the prices pop more.
-        ex: 
-        https://codepen.io/knyttneve/pen/NWjwbKz
-        https://codepen.io/chaoticpotato/pen/zYEPRYG
-        https://codepen.io/Qudusayo/pen/eYJKzdZ
-    -->
+            <main class="container p-3 mt-4 mb-4" id="main_form">
 
-    <body>
-        <div class="container">
-
-            <main class="justify-content" id="main_form">
-
-                <form class="paragraph-container row p-3 m-3" id="submit_form">
-                    <!-- <div class="col-sm-6">
-                        <label class="mt-4">Tasting room collection</label>
-                        <br>
-                        <label>Scents</label>
-                        <select name="scent-selection" id="inputPayments" class="form-control" aria-required="true">
-                            <option selected>Select...</option>
-                            <option>Lavender</option>
-                            <option>Citrus</option>
-                            <option>Cinamon</option>
-                        </select>
-                        
-                        <label for="">How many candles?</label>
-                        <input type="number" class="form-control" id="inputQuantity" placeholder="Amount" aria-required="true">
-
-                        <label for="inputQuantity">Cost</label>
-                        <div class="mt-2 col-sm-3" id="costDisplay">Total: </div>
-                        
-                    </div> -->
-                   
-                    <div class="col-6 mt-4">
+                <form class="row mx-auto" id="submit_form">
+                    
+                    <div class="col">
                         <label>Contact information</label>
-                        <div>
-                            <label for="inputFirstName">First Name</label>
+                        <div class="col-sm-7 fs-5">
+                            <label for="inputFirstName">First Name<span class="text-warning">*</span></label>
                             <input type="text" name="firstName" class="form-control" id="inputFirstName" placeholder="First name" aria-required="true">
-                        </div>
-                        <div>
-                            <label for="inputLastName">Last Name</label>
+                        
+                        
+                            <label for="inputLastName">Last Name<span class="text-warning">*</span></label>
                             <input type="text" name="lastName" class="form-control" id="inputLastName" placeholder="Last name" aria-required="true">
-                        </div>
-                        <div>
+                        
                             <label for="phoneNumber">Phone Number</label>
                             <input type="tel" name="phone" class="form-control" id="phoneNumber" placeholder="(916) 123-4567" aria-required="true">
-                        </div>
-                        <div>
-                            <label for="inputEmail4">Email</label>
+                        
+                            <label for="inputEmail4">Email<span class="text-warning">*</span></label>
                             <input type="email" name="email" class="form-control" id="inputEmail4" placeholder="Email" aria-required="true">
                         </div>
                     </div>
 
-                    <div class="col-6 mt-4">
-                        <div>
-                            <label for="inputAddress">Address</label>
+                    <div class="col">
+                        <div class="col-sm-7 fs-5">
+                            <label for="inputAddress">Address<span class="text-warning">*</span></label>
                             <input type="text" name="address" class="form-control" id="inputAddress" placeholder="1234 Main St" aria-required="true">
-                        </div>
-                        <div class="">
+                        
                             <label for="inputAddress2">Address 2</label>
                             <input type="text" name="address2" class="form-control" id="inputAddress2" placeholder="Apartment, studio, unit, floor, etc..." aria-required="true">
-                        </div>
-                        <div class="">
-                            <label for="inputCity">City</label>
-                            <input type="text" name="city" class="form-control" id="inputCity" aria-required="true">
-                        </div>
-                        <!-- <div class="col-sm-5">
-                            <label for="inputState">State</label>
-                            <div>California</div>
-                            <select name="state" class="form-control" id="inputState" aria-required="true">
-                                <option selected>Select...</option>
-                            </select>
-                        </div> -->
-                        <div class="col-sm-5">
-                            <label for="inputZip">Zip</label>
-                            <input type="number" name="zip" class="form-control" id="inputZip" aria-required="true">
-                        </div>
                         
-                       
+                            <label for="inputCity">City<span class="text-warning">*</span></label>
+                            <input type="text" name="city" class="form-control" id="inputCity" aria-required="true">
+                        
+                            <label for="inputState">State</label>
+                            <div class="california">California</div>
+                            <!-- <select name="state" class="form-control" id="inputState" aria-required="true">
+                                <option selected>Select...</option>
+                            </select> -->
+                            <div class="row">
+                                <div class="col-sm-5">
+                                    <label for="inputZip">Zip<span class="text-warning">*</span></label>
+                                    <input type="number" name="zip" class="form-control" id="inputZip" aria-required="true">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <div class="col-6">
-                        <button type="submit" class="col-6 btn btn-primary mt-3">Submit order</button>
+
+                    <div class="row">
+                        <div class="col">
+                            <div></div>
+                        </div>
+                        <div class="col col-sm-4">
+                            <div class="">
+                                <button type="submit" class="col-6 btn btn-primary mt-5 w-100">Submit order</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div></div>
+                        </div>
                     </div>
 
                 </form>
-                    
+                
+                <div class="text-warning text-center fs-5 p-3" id="disclaimer">
+                    <h2 class="fs-4">DISCLAIMER</h2>
+                    <p>At this time, we are only catering to customers in the Sacramento Valley and surrounding area. 
+                        We only have about a ~80mi radius from our operation. If you have any questions, feel free to Send
+                        an email instead.
+                    </p>
+                    <div class="bi bi-envelope-fill text-center text-white"> <a class="text-decoration-none" href="../pages/contact.html">Click here</a></div>
+                </div>
+    
             </main>
-        </div>
 
-        <footer class="p-3 mt-4" id="footer_footer">
-            <address class="contact mx-auto text-center text-white p-3" id="contact_info">
-                <h5>Contact</h5>
-                <ul>
-                    <li><a  class="text-decoration-none"
-                            id="phone_number" 
-                            href="tel:+19168735110">
-                            <i>(916) 873-5110</i>
-                        </a>
-                    </li>
-                    <li>
-                        <a  class="email-address text-decoration-none"
-                            id="email_address" 
-                            href="mailto:bustedtopcandles@gmail.com?subject=Busted Top Candle Order&body=Hello,%0A%0AI'm%20interested%20in%20ordering">
-                            Email us!
-                        </a>
-                    </li>
-                    <li><a  class="text-decoration-none"
-                            id="facebook_link" 
-                            href="https://www.facebook.com/bustedtopcandles"
-                            target="_blank">
-                            Facebook
-                        </a>
-                    </li>
-                    <li><img class="flag" id="gba_flag" alt="ProudlyMadeInTheUSA" src="../assets/pictures/USA-Flag.webp"></li>
-                </ul>
-            </address>
-        </footer>
+        <footer class="p-5" id="footer_footer"></footer>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
         <script src="../assets/script/script.js" defer></script>
-        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
     </body>
 

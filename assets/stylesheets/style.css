@@ -9,19 +9,13 @@
   #A5947A(light taupe)      
 */
 
-#logo {
-  width: 25%;
-}
-
 header {
   background-color: #653A3D;
   color: white;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
   background-color: #F5F5DC !important;
-  margin-top: env(safe-area-insert-top);
 }
 
 a {
@@ -46,25 +40,26 @@ button[aria-expanded="true"] .when-collapsed {
 
 .paragraph-container, 
 .email-us,
-.price-container {
+#contact_form_container,
+#main_form {
   background-color: #817A67;
   color: white;
   border-radius: 25px;
   font-size: 25px;
 }
 
-.price {
-  /* color: #2E2E2E; */
-  color: #691E59;
+.container {
+  border-radius: 0;
 }
 
-.price-blocks {
-  background-color: #817A67 !important; 
+#disclaimer,
+.california {
+  color: #691E59 !important;
 }
 
 footer {
-  /* position: fixed bottom !important; */
   background-color: #653A3D;
+  margin-top: 0 !important;
 }
 
 .flag {

@@ -6,4 +6,3 @@ and prepares them for a second life.
 <br>
 <br>
 They have partnered with several wineries in the Northern California region.
-<>
