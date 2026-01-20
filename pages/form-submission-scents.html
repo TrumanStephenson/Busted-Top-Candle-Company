@@ -12,16 +12,6 @@
         <title>Busted Top Candle Company</title>
     </head>
 
-    
-
-    <!-- Pricing Section:
-        Maybe a row for the list. Boxed out and make the prices pop more.
-        ex: 
-        https://codepen.io/knyttneve/pen/NWjwbKz
-        https://codepen.io/chaoticpotato/pen/zYEPRYG
-        https://codepen.io/Qudusayo/pen/eYJKzdZ
-    -->
-
     <body class="d-flex flex-column min-vh-100">
         
             <header class="position-sticky p-3 fs-4" id="busted_top_candle_company">
@@ -29,109 +19,40 @@
                     <div>Busted Top Candle Company</div>
                 </div>
                 <div>
-                    <nav class="nav justify-content-end mt-1 fs-5" id="navigation_bar">
+                    <nav class="nav justify-content-beg h6" id="navigation_bar">
                         <a class="nav-link text-decoration-none" href="../pages/about.html">About</a>
                         <a class="nav-link text-decoration-none" href="../pages/contact.html">Contact</a>
                         <a class="nav-link text-decoration-none" href="../index.html">Home</a>
+                        <a class="nav-link text-decoration-none text-muted">Order</a>
                     </nav>
                 </div>
             </header>
 
             <main class="paragraph-container container flex-fill p-3 mt-4 mb-4" id="main_form">
-
-                <form class="col-6" id="submit_form">
-                    <!-- <div class="col-sm-6">
-                        <label class="mt-4">Tasting room collection</label>
-                        <br>
-                        <label>Scents</label>
-                        <select name="scent-selection" id="inputPayments" class="form-control" aria-required="true">
-                            <option selected>Select...</option>
-                            <option>Lavender</option>
-                            <option>Citrus</option>
-                            <option>Cinamon</option>
-                        </select>
-                        
-                        <label for="">How many candles?</label>
-                        <input type="number" class="form-control" id="inputQuantity" placeholder="Amount" aria-required="true">
-
-                        <label for="inputQuantity">Cost</label>
-                        <div class="mt-2 col-sm-3" id="costDisplay">Total: </div>
-                        
-                    </div> -->
-                   
-                    <div class="col-auto">
-                        <label>Contact information</label>
-                        <div>
-                            <label for="inputFirstName">First Name</label>
-                            <input type="text" name="firstName" class="form-control" id="inputFirstName" placeholder="First name" aria-required="true">
-                        </div>
-                        <div>
-                            <label for="inputLastName">Last Name</label>
-                            <input type="text" name="lastName" class="form-control" id="inputLastName" placeholder="Last name" aria-required="true">
-                        </div>
-                        <div>
-                            <label for="phoneNumber">Phone Number</label>
-                            <input type="tel" name="phone" class="form-control" id="phoneNumber" placeholder="(916) 123-4567" aria-required="true">
-                        </div>
-                        <div>
-                            <label for="inputEmail4">Email</label>
-                            <input type="email" name="email" class="form-control" id="inputEmail4" placeholder="Email" aria-required="true">
-                        </div>
-                    </div>
-
-                    <div class="col-auto">
-                        <div>
-                            <label for="inputAddress">Address</label>
-                            <input type="text" name="address" class="form-control" id="inputAddress" placeholder="1234 Main St" aria-required="true">
-                        </div>
-                        <div class="">
-                            <label for="inputAddress2">Address 2</label>
-                            <input type="text" name="address2" class="form-control" id="inputAddress2" placeholder="Apartment, studio, unit, floor, etc..." aria-required="true">
-                        </div>
-                        <div class="">
-                            <label for="inputCity">City</label>
-                            <input type="text" name="city" class="form-control" id="inputCity" aria-required="true">
-                        </div>
-                        <div class="col-sm-5">
-                            <label for="inputState">State</label>
-                            <div class="text-muted">California</div>
-                            <!-- <select name="state" class="form-control" id="inputState" aria-required="true">
-                                <option selected>Select...</option>
-                            </select> -->
-                        </div>
-                        <div class="col-sm-5">
-                            <label for="inputZip">Zip</label>
-                            <input type="number" name="zip" class="form-control" id="inputZip" aria-required="true">
-                        </div>
-                        
-                       
-                    </div>
-                    <div>
-                        <div class="">
-                            <button type="submit" class="col-6 btn btn-primary mt-3">Submit order</button>
-                        </div>
-                        <div class="col-6">
-                            <button type="submit" class="col-6 btn btn-primary mt-3">Submit order</button>
-                        </div>
-                        <div class="col-6">
-                            <button type="submit" class="col-6 btn btn-primary mt-3">Submit order</button>
-                        </div>
-                    </div>
-
-                </form>
                 
-                <section class="text-center">
-                    <div class="text-warning">
-                        <h2>DISCLAIMER</h2>
-                        <p>At this time, we are only catering to customers in the Sacramento Valley and surrounding area. 
-                            We only have about an 80mi radius from our operation. If you have any questions, feel free to Send
-                            an email instead.
-                        </p>
-                    </div>
-                    <div class="bi bi-envelope-fill"> <a href="../pages/contact.html">Click here</a></div>
-                </section>
+                <label class="mt-4">Tasting room collection</label>
+                <br>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Flavor</th>
+                            <th scope="col">Hint 1</th>
+                            <th scope="col">Hint 2</th>
+                            <th scope="col">Hint 3</th>
+                            <th scope="col">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
                 
-                
+
+                <label for="">How many candles?</label>
+                <input type="number" class="form-control" id="inputQuantity" placeholder="Amount" aria-required="true">
+
+                <label for="inputQuantity">Cost</label>
+                <div class="mt-2 col-sm-3" id="costDisplay">Total: </div>
+                    
+             
             </main>
 
         <footer class="p-3 mt-4" id="footer_footer">
@@ -142,6 +63,7 @@
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
         <script src="../assets/script/script.js" defer></script>
+        <script src="../assets/script/scentsStorage.js" defer></script>
         <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
     </body>

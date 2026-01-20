@@ -26,18 +26,32 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-const states = [ 
-    "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", 
-    "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", 
-    "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", 
-    "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY" 
-];
+document.addEventListener("DOMContentLoaded", () => {
+    fetch("/assets/data/ScentInventory-8.csv")
+    .then(res => res.text())
+    .then(csv => {
+        const rows = csv.split("\n").map(r => {
+            const match = r.match(/(".*?"|[^",]+)(?=\s*,|\s*$)/g);
+            return match ? match.map(cell => cell.replace(/^"|"$/g, "")) : [];
+        });
 
-const select = document.getElementById("inputState");
+        const tbody = document.querySelector("tbody");
 
-states.forEach(state => {
-    const option = document.createElement("option");
-    option.textContent = state;
-    option.value = state;
-    select.appendChild(option);
+        // Skip header row
+        rows.slice(1).forEach(cols => {
+            if (cols.length < 5) return;
+
+            const [flavor, hint1, hint2, hint3, description] = cols;
+
+            tbody.innerHTML += `
+                <tr>
+                    <td>${flavor}</td>
+                    <td>${hint1}</td>
+                    <td>${hint2}</td>
+                    <td>${hint3}</td>
+                    <td>${description}</td>
+                </tr>
+            `;
+        });
+    });
 });
