@@ -6,6 +6,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../assets/stylesheets/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
         <title>Busted Top Candle Company</title>
@@ -13,19 +14,26 @@
 
     <body class="d-flex flex-column">
         
-            <header class="position-sticky p-3 fs-4" id="busted_top_candle_company">
-                <div class="mx-auto">
-                    <div>Busted Top Candle Company</div>
-                </div>
-                <div>
-                    <nav class="nav justify-content-beg h6" id="navigation_bar">
-                        <a class="nav-link text-decoration-none" href="../pages/about.html">About</a>
-                        <a class="nav-link text-decoration-none" href="../pages/contact.html">Contact</a>
-                        <a class="nav-link text-decoration-none" href="../index.html">Home</a>
-                        <a class="nav-link text-decoration-none text-muted">Order</a>
-                    </nav>
-                </div>
-            </header>
+            <header class="p-3 fs-4">
+            <div>Busted Top Candle Company</div>
+            <div class="dropend mt-2">
+
+                <button class="btn btn-secondary dropdown-toggle bg-transparent border-0" 
+                        type="button" 
+                        id="dropdownMenuButton2" 
+                        data-bs-toggle="dropdown" 
+                        aria-expanded="false">
+                        Menu
+                </button>
+                <ul class="dropdown-menu" id="navigation_bar" aria-labelledby="navMenuButton">
+                    <li><a class="dropdown-item">About</a></li>
+                    <li><a class="dropdown-item" href="/pages/contact.html">Contact</a></li>
+                    <li><a class="dropdown-item" href="../index.html">Home</a></li>
+                    <li><a class="dropdown-item text-muted" href="/pages/orders-form.html">Order</a></li>
+                    <li><a class="dropdown-item" href="/pages/form-submission-scents.html">Scents temp</a></li>
+                </ul>
+            </div>
+        </header>
 
             <div class="container w-50">
                 <div class="row">

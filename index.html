@@ -14,15 +14,24 @@
     
     <body class="d-flex flex-column">
         
-        <header class="position-sticky p-3 fs-4">
+        <header class="p-3 fs-4">
             <div>Busted Top Candle Company</div>
-            <nav class="nav justify-content-beg h6" id="navigation_bar">
-                <a class="nav-link text-decoration-none" href="pages/about.html">About</a>
-                <a class="nav-link text-decoration-none" href="pages/contact.html">Contact</a>
-                <a class="nav-link text-decoration-none text-muted">Home</a>
-                <a class="nav-link text-decoration-none" href="pages/form-submission.html">Order</a>
-                <a class="nav-link text-decoration-none" href="pages/form-submission-scents.html">Scents temp</a>
-            </nav>
+            <div class="dropdown mt-2">
+                <button class="btn btn-secondary dropdown-toggle bg-transparent border-0" 
+                        type="button" 
+                        id="dropdownMenuButton2" 
+                        data-bs-toggle="dropdown" 
+                        aria-expanded="false">
+                        Menu
+                </button>
+                <ul class="dropdown-menu" id="navigation_bar" aria-labelledby="navMenuButton">
+                    <li><a class="dropdown-item text-decoration-none">About</a></li>
+                    <li><a class="dropdown-item text-decoration-none" href="pages/contact.html">Contact</a></li>
+                    <li><a class="dropdown-item text-decoration-none text-muted">Home</a></li>
+                    <li><a class="dropdown-item text-decoration-none" href="pages/orders-form.html">Order</a></li>
+                    <li><a class="dropdown-item text-decoration-none" href="pages/form-submission-scents.html">Scents temp</a></li>
+                </ul>
+            </div>
         </header>
 
         <div>

@@ -14,36 +14,125 @@
 
     <body class="d-flex flex-column min-vh-100">
         
-            <header class="position-sticky p-3 fs-4" id="busted_top_candle_company">
-                <div class="mx-auto">
-                    <div>Busted Top Candle Company</div>
-                </div>
-                <div>
-                    <nav class="nav justify-content-beg h6" id="navigation_bar">
-                        <a class="nav-link text-decoration-none" href="../pages/about.html">About</a>
-                        <a class="nav-link text-decoration-none" href="../pages/contact.html">Contact</a>
-                        <a class="nav-link text-decoration-none" href="../index.html">Home</a>
-                        <a class="nav-link text-decoration-none text-muted">Order</a>
-                    </nav>
-                </div>
-            </header>
+        <header class="p-3 fs-4">
+            <div>Busted Top Candle Company</div>
+            <div class="dropdown mt-2">
+                <button class="btn btn-secondary dropdown-toggle bg-transparent border-0" 
+                        type="button" 
+                        id="dropdownMenuButton2" 
+                        data-bs-toggle="dropdown" 
+                        aria-expanded="false">
+                        Menu
+                </button>
+                <ul class="dropdown-menu" id="navigation_bar" aria-labelledby="navMenuButton">
+                    <li><a class="dropdown-item">About</a></li>
+                    <li><a class="dropdown-item" href="/pages/contact.html">Contact</a></li>
+                    <li><a class="dropdown-item" href="../index.html">Home</a></li>
+                    <li><a class="dropdown-item" href="/pages/orders-form.html">Order</a></li>
+                    <li><a class="dropdown-item text-muted" href="/pages/form-submission-scents.html">Scents temp</a></li>
+                </ul>
+            </div>
+        </header>
 
             <main class="paragraph-container container flex-fill p-3 mt-4 mb-4" id="main_form">
                 
                 <label class="mt-4">Tasting room collection</label>
-                <br>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">Flavor</th>
-                            <th scope="col">Hint 1</th>
-                            <th scope="col">Hint 2</th>
-                            <th scope="col">Hint 3</th>
-                            <th scope="col">Description</th>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
+                <div class="">
+                    <div class="mb-3">
+                        <label for="aroma" class="form-label">Aroma</label>
+                        <select class="form-select" id="aroma" name="aroma">
+                            <!-- <option value="#">...</option> -->
+                            <option value="bamboo_and_coconut">Bamboo and Coconut</option>
+                            <option value="bergamot">Bergamot</option>
+                            <option value="black_cherry_merlot">Black Cherry Merlot</option>
+                            <option value="bohemian_rose">Bohemian Rose</option>
+                            <option value="brandied_pear">Brandied Pear</option>
+                            <option value="butterscotch_and_bourbon">Butterscotch and Bourbon</option>
+                            <option value="cashmere_plum">Cashmere Plum</option>
+                            <option value="cedarwood_blanc">Cedarwood Blanc</option>
+                            <option value="cherry_eclipse">Cherry Eclipse</option>
+                            <option value="chocolate_fudge">Chocolate Fudge</option>
+                            <option value="cinnamon_chai">Cinnamon Chai</option>
+                            <option value="cinnamon_stick">Cinnamon Stick</option>
+                            <option value="citrus_agave">Citrus Agave</option>
+                            <option value="cranberry_woods">Cranberry Woods</option>
+                            <option value="cypress_and_bayberry">Cypress and Bayberry</option>
+                            <option value="forest_chai">Forest Chai</option>
+                            <option value="grapefruit_and_mangosteen">Grapefruit and Mangosteen</option>
+                            <option value="lavender_driftwood">Lavender Driftwood</option>
+                            <option value="lemon_verbana">Lemon Verbana</option>
+                            <option value="lemongrass_and_verbena_citronella">Lemongrass and Verbena Citronella</option>
+                            <option value="love_spell">Love Spell</option>
+                            <option value="lychee_blush">Lychee Blush</option>
+                            <option value="moonflower_nectar">Moonflower Nectar</option>
+                            <option value="moroccan_cashmere">Moroccan Cashmere</option>
+                            <option value="orange_pomander">Orange Pomander</option>
+                            <option value="pineapple_sage">Pineapple Sage</option>
+                            <option value="pink_sugar_crystals">Pink Sugar Crystals</option>
+                            <option value="pumpkin_spice_buttercream">Pumpkin Spice Buttercream</option>
+                            <option value="sandalwood">Sandalwood</option>
+                            <option value="sea_salt_and_orchid">Sea Salt and Orchid</option>
+                            <option value="strawberries_and_cream">Strawberries and Cream</option>
+                            <option value="sweet_tobacco">Sweet Tobacco</option>
+                            <option value="toasted_coconut">Toasted Coconut</option>
+                            <option value="very_vanilla">Very Vanilla</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="hint" class="form-label">Hint</label>
+                        <select class="form-select" id="hint" name="hint">
+                            <!-- <option value="#">...</option> -->
+                            <option value="almond_macaron">Almond Macaron</option>
+                            <option value="almond_macaroon">Almond Macaroon</option>
+                            <option value="amaretto_madeleine">Amaretto Madeleine</option>
+                            <option value="bergamot">Bergamot</option>
+                            <option value="black_cherry_merlot">Black Cherry Merlot</option>
+                            <option value="blood_orange">Blood Orange</option>
+                            <option value="citrus_agave">Citrus Agave</option>
+                            <option value="coconut_lime">Coconut Lime</option>
+                            <option value="dry_gin_and_cypress">Dry Gin and Cypress</option>
+                            <option value="golden_santal">Golden Santal</option>
+                            <option value="high_tide">High Tide</option>
+                            <option value="honeysuckle">Honeysuckle</option>
+                            <option value="lavender_driftwood">Lavender Driftwood</option>
+                            <option value="lemon_lime">Lemon Lime</option>
+                            <option value="macintosh_apple">Macintosh Apple</option>
+                            <option value="peach_nectar">Peach Nectar</option>
+                            <option value="pineapple_sage">Pineapple Sage</option>
+                            <option value="pumpkin_pie">Pumpkin Pie</option>
+                            <option value="sage_and_cypress">Sage and Cypress</option>
+                            <option value="sandalwood">Sandalwood</option>
+                            <option value="santal_and_coconut">Santal and Coconut</option>
+                            <option value="snickerdoodle">Snickerdoodle</option>
+                            <option value="strawberry_guava">Strawberry Guava</option>
+                            <option value="strudel_and_spice">Strudel and Spice</option>
+                            <option value="sunwashed">Sunwashed</option>
+                            <option value="vanilla_eggnog">Vanilla Eggnog</option>
+                            <option value="very_vanilla">Very Vanilla</option>
+                            <option value="wassail">Wassail</option>
+                            <option value="white_oak_and_vanilla">White Oak and Vanilla</option>
+                            <option value="woodland_snow">Woodland Snow</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="undertone" class="form-label">Undertone</label>
+                        <select class="form-select" id="undertone" name="undertone">
+                            <!-- <option value="#">...</option> -->
+                            <option value="spring">Spring</option>
+                            <option value="summer">Summer</option>
+                            <option value="fall">Fall</option>
+                            <option value="winter">Winter</option>
+                            <option value="masculine">Masculine</option>
+                            <option value="feminine">Feminine</option>
+                            <option value="kitchen">Kitchen</option>
+                            <option value="workshop">Workshop</option>
+                            <option value="citrus">Citrus</option>
+                            <option value="all_year">All Year</option>
+                            <option value="beach">Beach</option>
+                            <option value="mountains">Mountains</option>
+                        </select>
+                    </div>
+                </div>
                 
 
                 <label for="">How many candles?</label>

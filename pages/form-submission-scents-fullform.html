@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../assets/stylesheets/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+        <title>Busted Top Candle Company</title>
+    </head>
+
+    <body class="d-flex flex-column min-vh-100">
+        
+            <header class="position-sticky p-3 fs-4" id="busted_top_candle_company">
+                <div class="mx-auto">
+                    <div>Busted Top Candle Company</div>
+                </div>
+                <div>
+                    <nav class="nav justify-content-beg h6" id="navigation_bar">
+                        <a class="nav-link text-decoration-none" href="../pages/about.html">About</a>
+                        <a class="nav-link text-decoration-none" href="../pages/contact.html">Contact</a>
+                        <a class="nav-link text-decoration-none" href="../index.html">Home</a>
+                        <a class="nav-link text-decoration-none text-muted">Order</a>
+                    </nav>
+                </div>
+            </header>
+
+            <main class="paragraph-container container flex-fill p-3 mt-4 mb-4" id="main_form">
+                
+                <label class="mt-4">Tasting room collection</label>
+                <br>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Flavor</th>
+                            <th scope="col">Hint 1</th>
+                            <th scope="col">Hint 2</th>
+                            <th scope="col">Hint 3</th>
+                            <th scope="col">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                
+
+                <label for="">How many candles?</label>
+                <input type="number" class="form-control" id="inputQuantity" placeholder="Amount" aria-required="true">
+
+                <label for="inputQuantity">Cost</label>
+                <div class="mt-2 col-sm-3" id="costDisplay">Total: </div>
+                    
+             
+            </main>
+
+        <footer class="p-3 mt-4" id="footer_footer">
+            <address class="p-3" id="contact_info">
+                
+            </address>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../assets/script/script.js" defer></script>
+        <script src="../assets/script/scentsStorage.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+    </body>
+
+</html>
