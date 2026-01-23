@@ -2,18 +2,6 @@
   font-family: 'Roboto', sans-serif;
 } */
 
-/* For different screen sizes specifically */
-/* iPhone SE */
-@media (max-width: 375px) and (max-height: 667px) {
-    .mission-statement {
-      font-size: 20px !important;
-    }
-
-    .about-us {
-      font-size: 15px !important;
-    }
-  }
-
 /* Colors:
   (p-container)        +    (background)
   #691E59(orig plum)        #2E2E2E(charcoal gry)
@@ -21,27 +9,25 @@
   #A5947A(light taupe)      
 */
 
-#logo {
-  width: 25%;
-}
-
 header {
-    background-color: #653A3D;
-    color: white;
+  background-color: #653A3D;
+  color: white;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #F5F5DC !important;
-    margin-top: env(safe-area-insert-top);
+  background-color: #F5F5DC !important;
 }
 
 a {
-    color: inherit !important;
+  color: inherit !important;
+}
+
+.container {
+  min-width: 80% !important;
 }
 
 .btn {
-    color: white !important;
+  color: white !important;
 }
 
 .when-expanded {
@@ -58,25 +44,30 @@ button[aria-expanded="true"] .when-collapsed {
 
 .paragraph-container, 
 .email-us,
-.price-container {
-    background-color: #817A67;
-    color: white;
-    border-radius: 25px;
-    font-size: 25px;
+#contact_form_container,
+#main_form {
+  background-color: #817A67;
+  color: white;
+  border-radius: 25px;
+  font-size: 25px;
 }
 
-.price {
-    /* color: #2E2E2E; */
-    color: #691E59;
+#main_form {
+  margin-top: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
 }
 
-.price-blocks {
-    background-color: #817A67 !important; 
+.container {
+  border-radius: 0;
+}
+
+#disclaimer {
+  color: #ff9966 !important;
+  font-size: small !important;
 }
 
 footer {
-    position: fixed bottom;
-    background-color: #653A3D;
+  background-color: #653A3D;
 }
 
 .flag {
@@ -86,10 +77,40 @@ footer {
 
 .contact ul,
 .partners ul {
-    display: inline-block;
-    list-style-type: none;
-    padding-left: 0;
-    margin: 0 auto;
+  display: inline-block;
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0 auto;
+}
+
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+.dropdown-menu {
+  background-color: #817A67 !important;
+  border: none !important;
+  border-radius: 0.5rem !important;
+}
+
+.dropdown-item {
+  color: white !important;
+}
+
+/* .dropdown-menu {
+  animation: fadeIn .5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(0); }
+  to { opacity: 1; transform: translateY(0); }
+} */
+
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: #69614c!important;
+  color: #fff;
 }
 
 /* @media screen and (hover: hover) {
