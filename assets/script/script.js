@@ -26,32 +26,35 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-    fetch("/assets/data/ScentInventory-8.csv")
-    .then(res => res.text())
-    .then(csv => {
-        const rows = csv.split("\n").map(r => {
-            const match = r.match(/(".*?"|[^",]+)(?=\s*,|\s*$)/g);
-            return match ? match.map(cell => cell.replace(/^"|"$/g, "")) : [];
-        });
 
-        const tbody = document.querySelector("tbody");
+// This might not exist soon. Much more customer friendly version in place.
+// waiting on clients input.
+// document.addEventListener("DOMContentLoaded", () => {
+//     fetch("/assets/data/ScentInventory-8.csv")
+//     .then(res => res.text())
+//     .then(csv => {
+//         const rows = csv.split("\n").map(r => {
+//             const match = r.match(/(".*?"|[^",]+)(?=\s*,|\s*$)/g);
+//             return match ? match.map(cell => cell.replace(/^"|"$/g, "")) : [];
+//         });
 
-        // Skip header row
-        rows.slice(1).forEach(cols => {
-            if (cols.length < 5) return;
+//         const tbody = document.querySelector("tbody");
 
-            const [flavor, hint1, hint2, hint3, description] = cols;
+//         // Skip header row
+//         rows.slice(1).forEach(cols => {
+//             if (cols.length < 5) return;
 
-            tbody.innerHTML += `
-                <tr>
-                    <td>${flavor}</td>
-                    <td>${hint1}</td>
-                    <td>${hint2}</td>
-                    <td>${hint3}</td>
-                    <td>${description}</td>
-                </tr>
-            `;
-        });
-    });
-});
+//             const [flavor, hint1, hint2, hint3, description] = cols;
+
+//             tbody.innerHTML += `
+//                 <tr>
+//                     <td>${flavor}</td>
+//                     <td>${hint1}</td>
+//                     <td>${hint2}</td>
+//                     <td>${hint3}</td>
+//                     <td>${description}</td>
+//                 </tr>
+//             `;
+//         });
+//     });
+// });

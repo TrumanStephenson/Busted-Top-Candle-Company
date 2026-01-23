@@ -14,7 +14,7 @@
 
     <body class="d-flex flex-column">
         
-            <header class="p-3 fs-4">
+        <header class="p-3 fs-4">
             <div>Busted Top Candle Company</div>
             <div class="dropdown mt-2">
 
@@ -29,76 +29,76 @@
                     <li><a class="dropdown-item">About</a></li>
                     <li><a class="dropdown-item" href="/pages/contact.html">Contact</a></li>
                     <li><a class="dropdown-item" href="../index.html">Home</a></li>
-                    <li><a class="dropdown-item text-muted" href="/pages/orders-form.html">Order</a></li>
+                    <li><a class="dropdown-item text-muted">Order</a></li>
                     <li><a class="dropdown-item" href="/pages/form-submission-scents.html">Scents temp</a></li>
                 </ul>
             </div>
         </header>
 
-            <div class="container w-50">
-                <div class="row">
-                    <main class="p-3" id="main_form">
+        <div class="container w-50">
+            <div class="row">
+                <main class="p-3" id="main_form">
 
-                        <form id="submit_form">
+                    <form id="submit_form">
+                        
+                            <h2>Contact information</h2>
+                            <div class="fs-5">
+                                <label for="inputFirstName">First Name<span class="text-warning">*</span></label>
+                                <input type="text" name="firstName" class="form-control" id="inputFirstName" placeholder="First name" aria-required="true">
                             
-                                <label>Contact information</label>
-                                <div class="fs-5">
-                                    <label for="inputFirstName">First Name<span class="text-warning">*</span></label>
-                                    <input type="text" name="firstName" class="form-control" id="inputFirstName" placeholder="First name" aria-required="true">
-                                
-                                    <label for="inputLastName">Last Name<span class="text-warning">*</span></label>
-                                    <input type="text" name="lastName" class="form-control" id="inputLastName" placeholder="Last name" aria-required="true">
-                                
-                                    <label for="phoneNumber">Phone Number</label>
-                                    <input type="tel" name="phone" class="form-control" id="phoneNumber" placeholder="(916) 123-4567" aria-required="true">
-                                
-                                    <label for="inputEmail4">Email<span class="text-warning">*</span></label>
-                                    <input type="email" name="email" class="form-control" id="inputEmail4" placeholder="Email" aria-required="true">
+                                <label for="inputLastName">Last Name<span class="text-warning">*</span></label>
+                                <input type="text" name="lastName" class="form-control" id="inputLastName" placeholder="Last name" aria-required="true">
                             
-                                    <label for="inputAddress">Address<span class="text-warning">*</span></label>
-                                    <input type="text" name="address" class="form-control" id="inputAddress" placeholder="1234 Main St" aria-required="true">
-                                
-                                    <label for="inputAddress2">Address 2</label>
-                                    <input type="text" name="address2" class="form-control" id="inputAddress2" placeholder="Apartment, studio, unit, floor, etc..." aria-required="true">
-                                
-                                    <label for="inputCity">City<span class="text-warning">*</span></label>
-                                    <input type="text" name="city" class="form-control" id="inputCity" aria-required="true">
-                                
-                                    <label for="inputState">State</label>
-                                    <div>California</div>
-                                    <!-- <select name="state" class="form-control" id="inputState" aria-required="true">
-                                        <option selected>Select...</option>
-                                    </select> -->
-                                    <div class="">
-                                        <div class="col-sm-5">
-                                            <label for="inputZip">Zip<span class="text-warning">*</span></label>
-                                            <input type="number" name="zip" class="form-control" id="inputZip" aria-required="true">
-                                        </div>
-                                    </div>
+                                <label for="phoneNumber">Phone Number</label>
+                                <input type="tel" name="phone" class="form-control" id="phoneNumber" placeholder="(916) 123-4567" aria-required="true">
+                            
+                                <label for="inputEmail4">Email<span class="text-warning">*</span></label>
+                                <input type="email" name="email" class="form-control" id="inputEmail4" placeholder="Email" aria-required="true">
+                        
+                                <label for="inputAddress">Address<span class="text-warning">*</span></label>
+                                <input type="text" name="address" class="form-control" id="inputAddress" placeholder="1234 Main St" aria-required="true">
+                            
+                                <label for="inputAddress2">Address 2</label>
+                                <input type="text" name="address2" class="form-control" id="inputAddress2" placeholder="Apartment, studio, unit, floor, etc..." aria-required="true">
+                            
+                                <label for="inputCity">City<span class="text-warning">*</span></label>
+                                <input type="text" name="city" class="form-control" id="inputCity" aria-required="true">
+                            
+                                <label for="inputState">State</label>
+                                <div>California</div>
+                                <!-- <select name="state" class="form-control" id="inputState" aria-required="true">
+                                    <option selected>Select...</option>
+                                </select> -->
+                                <div class="">
                                     <div class="col-sm-5">
-                                        <button type="submit" class="col-6 btn btn-primary mt-5 w-100" id="submit_form">Submit order</button>
+                                        <label for="inputZip">Zip<span class="text-warning">*</span></label>
+                                        <input type="number" name="zip" class="form-control" id="inputZip" aria-required="true">
                                     </div>
                                 </div>
-                        </form>
-                        
-                        <div class="p-3" id="disclaimer">
-                            <h5>DISCLAIMER</h5>
-                            <p>At this time, we are only catering to customers in the Sacramento Valley and surrounding area. 
-                                We only have about a ~80mi radius from our operation. If you have any questions, feel free to send
-                                an email instead.
-                            </p>
-                            <div class="bi bi-envelope-fill text-white"> <a class="text-decoration-none" href="../pages/contact.html">Click here</a></div>
-                        </div>
-            
-                    </main>
-                </div>
+                                <div class="col-sm-5">
+                                    <button type="submit" class="col-6 btn btn-primary mt-5 w-100" id="submit_order">Submit order</button>
+                                </div>
+                            </div>
+                    </form>
+                    
+                    <div class="p-3" id="disclaimer">
+                        <h5>DISCLAIMER</h5>
+                        <p>At this time, we are only catering to customers in the Sacramento Valley and surrounding area. 
+                            We only have about a ~80mi radius from our operation. If you have any questions, feel free to send
+                            an email instead.
+                        </p>
+                        <div class="bi bi-envelope-fill text-white"> <a class="text-decoration-none" href="../pages/contact.html">Click here</a></div>
+                    </div>
+        
+                </main>
             </div>
+        </div>
 
         <footer class="p-5" id="footer_footer"></footer>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
         <script src="../assets/script/script.js" defer></script>
-        <script src="../assets/script/resendEmail.js"></script>
+        <script src="/assets/script/resend-email-function.js"></script>
 
     </body>
 

@@ -1,4 +1,4 @@
-document.getElementById("submit_form").addEventListener("submit", async (e) => {
+document.getElementById("submit_order").addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const formData = Object.fromEntries(new FormData(e.target));

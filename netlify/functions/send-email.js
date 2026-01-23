@@ -1,4 +1,4 @@
-import { resend } from 'resend';
+import { Resend } from 'resend';
 
 export async function handler(event, context) {
     if (event.httpMethod !== "POST") {
@@ -14,9 +14,9 @@ export async function handler(event, context) {
 
     try {
         await resend.emails.send({
-            from: "order.bustedtopcandles.com",
+            from: "bustedtopcandles@gmail.com",
             to: "bustedtopcandles@gmail.com",
-            subject: "New Order Submission",
+            subject: "New Order Placed",
             html: `
                 <h2>New Order</h2>
                 <p><strong>Name:</strong> ${data.firstName} ${data.lastName}</p>
