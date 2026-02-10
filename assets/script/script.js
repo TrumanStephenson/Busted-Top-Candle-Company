@@ -1,13 +1,38 @@
+document.addEventListener("DOMContentLoaded", async function () {
+    const response = await fetch("/assets/data/scents.json");
+    const data = await response.json();
+    const scents = data.ScentInventory;
+
+    const select = document.getElementById("scents");
+    const desc = document.getElementById("scentDescription");
+
+    scents.forEach(scent => {
+        const option = document.createElement("option");
+        option.value = scent.id;
+        option.textContent = scent.name;
+        select.appendChild(option);
+    });
+
+    select.addEventListener("change", () => {
+        const selectedId = select.value;
+        const scent = scents.find(s => s.id === selectedId);
+
+        desc.textContent =
+            "Description: \n" + (scent?.description || "No description available");
+    });
+});
+
+
 document.addEventListener("DOMContentLoaded", function() {
     const qtyInput = document.getElementById("inputQuantity");
-    // let pricePer = document.getElementById("costDisplay");
+    let pricePer = document.getElementById("costDisplay");
 
     qtyInput.addEventListener("input", function() {
         const qty = parseInt(this.value, 10);
         let pricePer = 0;
 
         if (!qty || qty <= 0) {
-            costDisplay.textContent = "";
+            costDisplay.textContent = "Total: ";
             return;
         }
 
@@ -26,35 +51,25 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+const images = [
+    "./assets/pictures/btc-photos/disco-1.jpg",
+    "./assets/pictures/btc-photos/disco-3.jpg",
+    "./assets/pictures/btc-photos/disco-4.jpg",
+    "./assets/pictures/btc-photos/disco-5.jpg",
+    "./assets/pictures/btc-photos/disco-6.jpg"
+]
 
-// This might not exist soon. Much more customer friendly version in place.
-// waiting on clients input.
-// document.addEventListener("DOMContentLoaded", () => {
-//     fetch("/assets/data/ScentInventory-8.csv")
-//     .then(res => res.text())
-//     .then(csv => {
-//         const rows = csv.split("\n").map(r => {
-//             const match = r.match(/(".*?"|[^",]+)(?=\s*,|\s*$)/g);
-//             return match ? match.map(cell => cell.replace(/^"|"$/g, "")) : [];
-//         });
+let index = 0;
+const imgElement = document.getElementById("carousel-img");
 
-//         const tbody = document.querySelector("tbody");
+function changeImage(step =1) {
+    imgElement.style.opacity = 0;
 
-//         // Skip header row
-//         rows.slice(1).forEach(cols => {
-//             if (cols.length < 5) return;
+    setTimeout(() => {
+        index = (index + step + images.length) % images.length;
+        imgElement.src = images[index];
+        imgElement.style.opacity = 1;
+    }, 400);
+}
 
-//             const [flavor, hint1, hint2, hint3, description] = cols;
-
-//             tbody.innerHTML += `
-//                 <tr>
-//                     <td>${flavor}</td>
-//                     <td>${hint1}</td>
-//                     <td>${hint2}</td>
-//                     <td>${hint3}</td>
-//                     <td>${description}</td>
-//                 </tr>
-//             `;
-//         });
-//     });
-// });
+let autoSlide = setInterval(changeImage, 3500);
