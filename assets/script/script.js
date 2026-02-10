@@ -1,3 +1,28 @@
+document.addEventListener("DOMContentLoaded", async function () {
+    const response = await fetch("/assets/data/scents.json");
+    const data = await response.json();
+    const scents = data.ScentInventory;
+
+    const select = document.getElementById("scents");
+    const desc = document.getElementById("scentDescription");
+
+    scents.forEach(scent => {
+        const option = document.createElement("option");
+        option.value = scent.id;
+        option.textContent = scent.name;
+        select.appendChild(option);
+    });
+
+    select.addEventListener("change", () => {
+        const selectedId = select.value;
+        const scent = scents.find(s => s.id === selectedId);
+
+        desc.textContent =
+            "Description: \n" + (scent?.description || "No description available");
+    });
+});
+
+
 document.addEventListener("DOMContentLoaded", function() {
     const qtyInput = document.getElementById("inputQuantity");
     let pricePer = document.getElementById("costDisplay");
@@ -26,5 +51,25 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-var scentDescription = document.getElementById("scentDescription");
-    
+const images = [
+    "./assets/pictures/btc-photos/disco-1.jpg",
+    "./assets/pictures/btc-photos/disco-3.jpg",
+    "./assets/pictures/btc-photos/disco-4.jpg",
+    "./assets/pictures/btc-photos/disco-5.jpg",
+    "./assets/pictures/btc-photos/disco-6.jpg"
+]
+
+let index = 0;
+const imgElement = document.getElementById("carousel-img");
+
+function changeImage(step =1) {
+    imgElement.style.opacity = 0;
+
+    setTimeout(() => {
+        index = (index + step + images.length) % images.length;
+        imgElement.src = images[index];
+        imgElement.style.opacity = 1;
+    }, 400);
+}
+
+let autoSlide = setInterval(changeImage, 3500);
