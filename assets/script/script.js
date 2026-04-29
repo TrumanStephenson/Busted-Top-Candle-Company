@@ -60,11 +60,12 @@ const images = [
 ]
 
 let index = 0;
-const imgElement = document.getElementById("carousel-img");
+let imgElement = document.getElementById("carousel-img");
 
-function changeImage(step =1) {
+function changeImage(step = 1) {
+    if (!imgElement) return;
+
     imgElement.style.opacity = 0;
-
     setTimeout(() => {
         index = (index + step + images.length) % images.length;
         imgElement.src = images[index];
@@ -72,4 +73,4 @@ function changeImage(step =1) {
     }, 400);
 }
 
-let autoSlide = setInterval(changeImage, 3500);
+let autoSlide = imgElement ? setInterval(changeImage, 3500) : null;
