@@ -14,18 +14,17 @@ export async function handler(event, context) {
     try {
         await resend.emails.send({
             from: "orders@bustedtopcandles.com",  // must match your verified Porkbun domain
-            to: "bustedtopcandles@gmail.com",
+            to: "trumanstephenson3@gmail.com",
             subject: "New Order Placed",
             html: `
                 <h2>New Order</h2>
+                <p><strong>Scent:</strong> ${data.scent}</p>
+                <p><strong>Quantity:</strong> ${data.quantity}</p>
                 <p><strong>Name:</strong> ${data.firstName} ${data.lastName}</p>
                 <p><strong>Email:</strong> ${data.email}</p>
                 <p><strong>Phone:</strong> ${data.phone}</p>
                 <p><strong>Address:</strong> ${data.address} ${data.address2 || ""}</p>
-                <p><strong>City:</strong> ${data.city}</p>
-                <p><strong>Zip:</strong> ${data.zip}</p>
-                <p><strong>Scent:</strong> ${data.scent}</p>
-                <p><strong>Quantity:</strong> ${data.quantity}</p>
+                <p><strong>City:</strong> ${data.city}, California ${data.zip}</p>
             `
         });
 
