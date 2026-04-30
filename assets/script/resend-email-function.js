@@ -9,11 +9,11 @@ document.getElementById("submit_form").addEventListener("submit", async (e) => {
     formData.inputFirstName = document.getElementById("inputFirstName")?.value || "";
     formData.inputLastName = document.getElementById("inputLastName")?.value || "";
     formData.phoneNumber = document.getElementById("phoneNumber")?.value || "";
-    formData.email = document.getElementById("email")?.value || "";
-    formData.address = document.getElementById("address")?.value || "";
-    formData.address2 = document.getElementById("address2")?.value || "";
-    formData.city = document.getElementById("city")?.value || "";
-    formData.zip = document.getElementById("zip")?.value || "";
+    formData.email = document.getElementById("inputEmail")?.value || "";
+    formData.address = document.getElementById("inputAddress")?.value || "";
+    formData.address2 = document.getElementById("inputAddress2")?.value || "";
+    formData.city = document.getElementById("inputCity")?.value || "";
+    formData.zip = document.getElementById("inputZip")?.value || "";
 
     const response = await fetch("/.netlify/functions/send-email", {
         method: "POST",

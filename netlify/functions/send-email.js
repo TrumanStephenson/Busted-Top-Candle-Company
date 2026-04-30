@@ -13,7 +13,7 @@ export async function handler(event, context) {
 
     try {
         await resend.emails.send({
-            from: "orders@bustedtopcandles.com",  // must match your verified Porkbun domain
+            from: "orders@send.bustedtopcandles.com",
             to: "bustedtopcandles@gmail.com",
             subject: "New Order Placed",
             html: `
