@@ -84,7 +84,8 @@ footer {
   display: none !important;
 }
 .dropdown-menu {
-  background-color: #817A67 !important;
+  /* background-color: #817A67 !important; */
+  background-color: #958f7e !important;
   border: none !important;
   border-radius: 0.5rem !important;
 }
