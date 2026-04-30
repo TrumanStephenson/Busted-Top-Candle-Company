@@ -13,7 +13,7 @@ export async function handler(event, context) {
 
     try {
         await resend.emails.send({
-            from: "orders@send.bustedtopcandles.com",
+            from: "orders@orders.bustedtopcandles.com",
             to: "bustedtopcandles@gmail.com",
             subject: "New Order Placed",
             html: `
