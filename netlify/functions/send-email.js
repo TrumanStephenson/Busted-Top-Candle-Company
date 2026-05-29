@@ -2,41 +2,86 @@ import { Resend } from 'resend';
 
 export async function handler(event, context) {
     if (event.httpMethod !== "POST") {
-        return {
-            statusCode: 405,
-            body: "Method Not Allowed"
-        };
+        return { statusCode: 405, body: "Method Not Allowed" };
     }
 
     const data = JSON.parse(event.body);
     const resend = new Resend(process.env.RESEND_API_KEY);
 
+    const isContact = data.formType === "contact";
+
+    const subject = isContact ? "New Contact Message" : "New Order Placed";
+
+    const html = isContact ? `
+        <h2>New Contact Message</h2>
+        <p><strong>Name:</strong> ${data.firstName} ${data.lastName}</p>
+        <p><strong>Email:</strong> ${data.email}</p>
+        <p><strong>Message:</strong> ${data.message}</p>
+    ` : `
+        <h2>New Order</h2>
+        <p><strong>Scent:</strong> ${data.scent}</p>
+        <p><strong>Quantity:</strong> ${data.quantity}</p>
+        <p><strong>Name:</strong> ${data.firstName} ${data.lastName}</p>
+        <p><strong>Email:</strong> ${data.email}</p>
+        <p><strong>Phone:</strong> ${data.phone}</p>
+        <p><strong>Address:</strong> ${data.address} ${data.address2 || ""}</p>
+        <p><strong>City:</strong> ${data.city}, California ${data.zip}</p>
+    `;
+
     try {
         await resend.emails.send({
             from: "orders@orders.bustedtopcandles.com",
             to: "bustedtopcandles@gmail.com",
-            subject: "New Order Placed",
-            html: `
-                <h2>New Order</h2>
-                <p><strong>Scent:</strong> ${data.scent}</p>
-                <p><strong>Quantity:</strong> ${data.quantity}</p>
-                <p><strong>Name:</strong> ${data.firstName} ${data.lastName}</p>
-                <p><strong>Email:</strong> ${data.email}</p>
-                <p><strong>Phone:</strong> ${data.phone}</p>
-                <p><strong>Address:</strong> ${data.address} ${data.address2 || ""}</p>
-                <p><strong>City:</strong> ${data.city}, California ${data.zip}</p>
-            `
+            subject,
+            html
         });
 
-        return {
-            statusCode: 200,
-            body: JSON.stringify({ success: true })
-        };
+        return { statusCode: 200, body: JSON.stringify({ success: true }) };
     } catch (error) {
         console.error("Error sending email:", error);
-        return {
-            statusCode: 500,
-            body: JSON.stringify({ success: false, error: error.message })
-        };
+        return { statusCode: 500, body: JSON.stringify({ success: false, error: error.message }) };
     }
 }
+
+// import { Resend } from 'resend';
+
+// export async function handler(event, context) {
+//     if (event.httpMethod !== "POST") {
+//         return {
+//             statusCode: 405,
+//             body: "Method Not Allowed"
+//         };
+//     }
+
+//     const data = JSON.parse(event.body);
+//     const resend = new Resend(process.env.RESEND_API_KEY);
+
+//     try {
+//         await resend.emails.send({
+//             from: "orders@orders.bustedtopcandles.com",
+//             to: "bustedtopcandles@gmail.com",
+//             subject: "New Order Placed",
+//             html: `
+//                 <h2>New Order</h2>
+//                 <p><strong>Scent:</strong> ${data.scent}</p>
+//                 <p><strong>Quantity:</strong> ${data.quantity}</p>
+//                 <p><strong>Name:</strong> ${data.firstName} ${data.lastName}</p>
+//                 <p><strong>Email:</strong> ${data.email}</p>
+//                 <p><strong>Phone:</strong> ${data.phone}</p>
+//                 <p><strong>Address:</strong> ${data.address} ${data.address2 || ""}</p>
+//                 <p><strong>City:</strong> ${data.city}, California ${data.zip}</p>
+//             `
+//         });
+
+//         return {
+//             statusCode: 200,
+//             body: JSON.stringify({ success: true })
+//         };
+//     } catch (error) {
+//         console.error("Error sending email:", error);
+//         return {
+//             statusCode: 500,
+//             body: JSON.stringify({ success: false, error: error.message })
+//         };
+//     }
+// }

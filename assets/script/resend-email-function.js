@@ -5,6 +5,7 @@ document.getElementById("submit_form").addEventListener("submit", async (e) => {
 
     formData.scent = document.getElementById("scents")?.value || "";
     formData.quantity = document.getElementById("inputQuantity")?.value || "";
+    formData.price = document.getElementById("costDisplay")?.value || "";
 
     formData.inputFirstName = document.getElementById("inputFirstName")?.value || "";
     formData.inputLastName = document.getElementById("inputLastName")?.value || "";
