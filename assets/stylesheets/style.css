@@ -54,9 +54,9 @@ button[aria-expanded="true"] .when-collapsed {
   margin-bottom: 1.5rem !important;
 }
 
-.container {
+/* .container {
   border-radius: 0;
-}
+} */
 
 #disclaimer {
   color: #ff9966 !important;
@@ -65,6 +65,11 @@ button[aria-expanded="true"] .when-collapsed {
 
 footer {
   background-color: #653A3D;
+}
+
+.contact_about {
+  bottom: 0;
+  width: 100%;
 }
 
 .flag {
