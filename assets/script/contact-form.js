@@ -23,3 +23,17 @@ document.querySelector("form").addEventListener("submit", async (e) => {
         alert("There was an issue sending your message.");
     }
 });
+
+(function prefillFeedbackFromUrl() {
+    const params = new URLSearchParams(window.location.search);
+  
+    if (params.get("feedback") !== "1") return;
+  
+    const messageField = document.getElementById("message");
+    const prefilled = params.get("message");
+  
+    if (messageField && prefilled) {
+      messageField.value = prefilled;
+      messageField.focus();
+    }
+  })();
