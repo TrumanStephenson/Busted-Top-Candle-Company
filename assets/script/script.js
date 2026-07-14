@@ -1,10 +1,11 @@
 document.addEventListener("DOMContentLoaded", async function () {
+    const select = document.getElementById("scents");
+    const desc = document.getElementById("scentDescription");
+    if (!select || !desc) return;
+
     const response = await fetch("/assets/data/scents.json");
     const data = await response.json();
     const scents = data.ScentInventory;
-
-    const select = document.getElementById("scents");
-    const desc = document.getElementById("scentDescription");
 
     scents.forEach(scent => {
         const option = document.createElement("option");
@@ -25,7 +26,8 @@ document.addEventListener("DOMContentLoaded", async function () {
 
 document.addEventListener("DOMContentLoaded", function() {
     const qtyInput = document.getElementById("inputQuantity");
-    let pricePer = document.getElementById("costDisplay");
+    const costDisplay = document.getElementById("costDisplay");
+    if (!qtyInput || !costDisplay) return;
 
     qtyInput.addEventListener("input", function() {
         const qty = parseInt(this.value, 10);
@@ -47,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         const total = qty * pricePer;
-        document.getElementById("costDisplay").innerText = `Total: $${total}`;
+        costDisplay.textContent = `Total: $${total}`;
     });
 });
 
